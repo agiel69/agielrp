@@ -1,0 +1,131 @@
+// Variable
+$white: #ff7700;
+$black: #212121;
+$primary1: #1e1e1e; // abu gelap netral
+$btnColor: #f57c00; // oranye elegan
+$yellow: #ffeb3b; // aksen kuning cerah
+$gray: #ff0000;
+
+// Import Font
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+// Base
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: $primary1;
+  color: $white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Header
+header {
+  background-color: $black;
+  padding: 1rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $btnColor;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+
+    li a {
+      text-decoration: none;
+      color: $white;
+      font-weight: 500;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $btnColor;
+      }
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  background-color: $primary1;
+  padding: 6rem 0;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: $white;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: $gray;
+  }
+
+  .hero_btn {
+    background-color: $btnColor;
+    color: $white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($btnColor, 10%);
+    }
+  }
+}
+
+// Card or Section Example
+.section {
+  background-color: darken($primary1, 5%);
+  padding: 3rem 0;
+
+  h2 {
+    color: $yellow;
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    background-color: $black;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: $white;
+
+    h3 {
+      color: $btnColor;
+    }
+
+    p {
+      color: $gray;
+    }
+  }
+}
+
+// Footer
+footer {
+  background-color: $black;
+  text-align: center;
+  padding: 1rem;
+  color: $gray;
+  font-size: 0.9rem;
+}
